@@ -7,7 +7,7 @@ function copyPassword() {
   var copyText = document.getElementById("password");
   copyText.select();
   document.execCommand("copy");
-  alert("Copied the text: " + copyText.value);
+  alert("Copied the generated password to your clipboard: " + copyText.value);
 
 }
 
@@ -74,7 +74,7 @@ function generatePassword() {
   }
 
   if ( specialConfirm === false && numbersConfirm === false && lowerCasesConfirm === false && upperCasesConfirm == false) {
-    alert ("You Must choose an option");
+    alert ("You must choose an option");
     return generatePassword();
     }
 
