@@ -24,24 +24,25 @@ function generatePassword() {
   
   if (passwordLength < 8 ) {
     alert("Password is too short");
-    return "";
+    return generatePassword();
   } 
 
   if (passwordLength > 128 ) {
     alert("Password is too long");
-    return "";
+    return generatePassword();
   } 
+  else  {
 
-  var numbers = confirm("Do you want your password to include numbers?");
+  var numbersConfirm = confirm("Do you want your password to include numbers?");
 
-  var lowerCases = confirm("Do you want your password to include? lower case letters?");
+  var lowerCasesConfirm = confirm("Do you want your password to include? lower case letters?");
 
-  var upperCases = confirm("Do you want your password to include upper cases letters?");
+  var upperCasesConfirm = confirm("Do you want your password to include upper cases letters?");
 
-  var special = confirm("Do you want your password to include special characters?");
+  var specialConfirm = confirm("Do you want your password to include special characters?");
+  }
 
-  // this is a minimum count for numbers, lowerCases, upperCases & specialCharacters
-  var minimumCount = 0;
+
 
 
   // Empty minimums for numbers, lowerCases, upperCases & specialCharacters
