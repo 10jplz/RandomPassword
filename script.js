@@ -2,11 +2,17 @@
 var    generateBtn = document.getElementById('generateBtn')
 generateBtn.addEventListener('click', writePassword)
 
+// Replaced function to get random character and typed available charecters 
+const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numbers = "1234567890"
+const special = "!@#$%^&*()";
+
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 
 }
@@ -44,28 +50,6 @@ function generatePassword() {
   var minimumLowerCases = "";
   var minimumUpperCases = "";
   var minimumSpecialCharacters = "";
-
-
-  // Generator functions**
-  var functionArray = {
-    getNumbers: function() {
-      return String.fromCharCode(Math.floor(Math.random() * 10 + 48));
-    },
-
-    getLowerCases: function() {
-      return String.fromCharCode(Math.floor(Math.random() * 26 + 97));
-    },
-
-    getUpperCases: function() {
-      return String.fromCharCode(Math.floor(Math.random() * 26 + 65));
-    },
-
-    getSpecialCharacters: function() {
-      return specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
-    }
-
-};
-var specialCharacters = "!@#$%^&*()";
 
 
   // Checks to make sure user selected ok for all and uses empty minimums from above
